@@ -1,5 +1,7 @@
 import requests
 from bs4 import BeautifulSoup as bs
+
+from proxies import proxies
 from sell import selling
 def max_data(url):
     r = requests.get(url)

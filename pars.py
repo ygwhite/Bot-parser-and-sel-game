@@ -1,11 +1,13 @@
 import requests
 from bs4 import BeautifulSoup as bs
 
+from proxies import proxies
+
 ps_list_game = []
 ps_link_game = []
 ps_image_game = []
 
-for page in range(1, 20):
+for page in range(1, 5):
     url = f'https://store.playstation.com/en-tr/pages/browse/{page}'
     r = requests.get(url)
     soup = bs(r.text, 'html.parser')
