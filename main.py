@@ -37,7 +37,7 @@ def game_search(message):
                 if game_data.lower() in key.lower():
                     i = True
                     isfound = True
-                    r = requests.get(value_link, proxies=proxies)
+                    r = requests.get(value_link)
                     soup = bs(r.text, 'lxml')
                     name_game_ps5 = soup.find('h1',class_='psw-m-b-5 psw-t-title-l psw-t-size-8 psw-l-line-break-word')
                     if name_game_ps5 != None:
